@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Meu Projeto de Filmes</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background: #121212;
+      color: #eee;
+      line-height: 1.6;
+    }
+    header {
+      background: #1f1f1f;
+      padding: 1.5rem 2rem;
+      text-align: center;
+      box-shadow: 0 2px 5px rgba(0,0,0,0.7);
+    }
+    header h1 {
+      font-size: 2rem;
+      color: #e50914;
+      letter-spacing: 2px;
+    }
+    main {
+      max-width: 1200px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+    .movies-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+      gap: 1.5rem;
+    }
+    .movie-card {
+      background: #222;
+      border-radius: 8px;
+      overflow: hidden;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.6);
+      transition: transform 0.3s ease;
+      cursor: pointer;
+    }
+    .movie-card:hover {
+      transform: scale(1.05);
+    }
+    .movie-poster {
+      width: 100%;
+      display: block;
+    }
+    .movie-info {
+      padding: 1rem;
+    }
+    .movie-title {
+      font-size: 1.2rem;
+      color: #e50914;
+      margin-bottom: 0.5rem;
+    }
+    .movie-description {
+      font-size: 0.95rem;
+      color: #ccc;
+      height: 3.2em; /* limit text height */
+      overflow: hidden;
+      text-overflow: ellipsis;
+    }
+    footer {
+      text-align: center;
+      padding: 1rem;
+      background: #1f1f1f;
+      color: #888;
+      margin-top: 3rem;
+    }
+    @media (max-width: 600px) {
+      header h1 {
+        font-size: 1.5rem;
+      }
+      .movie-description {
+        height: auto;
+      }
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Projeto de Filmes</h1>
+</header>
+
+<main>
+  <section class="movies-grid">
+    <article class="movie-card">
+      <img src="https://static.ndmais.com.br/2021/04/godzilla-vs-kong-640x800.jpg" alt="godzilla vs kong" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Godzilla vs King Kong</h2>
+        <p class="movie-description">Kong e seus protetores embarcam em uma jornada perigosa </p>
+      </div>
+    </article>
+
+        <article class="movie-card">
+      <img src="https://sugar-dance.org/imagens/2014/04/20140417-x-men-days-of-future-past-international-poster.jpg" alt="X-MEN" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">X-MEN - dias de um futuro esquecido</h2>
+        <p class="movie-description">Os X-Men enviam Wolverine ao passado em um esforço para mudar a história e prevenir uma desgraça para humanos e mutantes.</p>
+      </div>
+    </article>
+
+
+        <article class="movie-card">
+      <img src="https://ingresso-a.akamaihd.net/prd/img/movie/f1-o-filme/3a0a118e-8bf3-4e10-b45d-f028cd49b001.webp?v=2024-05-08-qRf34" alt="F1 O filme" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">F1 filme</h2>
+        <p class="movie-description">Sonny Hayes era o piloto mais promissor da Fórmula 1 até que um acidente na pista quase encerrou sua carreira. Trinta anos depois, o proprietário de uma equipe de Fórmula 1 em dificuldades convence Sonny a voltar a correr e se tornar o melhor do mundo.</p>
+      </div>
+    </article>
+
+
+        <article class="movie-card">
+      <img src="https://midias.jb.com.br/_midias/jpg/2024/10/04/substance-948477.jpg" alt="A substância" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">A substância</h2>
+        <p class="movie-description">Elisabeth Sparkle, renomada por um programa de aeróbica, enfrenta um golpe devastador quando seu chefe a demite. Em meio ao seu desespero, um laboratório lhe oferece uma substância que promete transformá-la em uma versão aprimorada.</p>
+      </div>
+    </article>
+
+        <article class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/8UlWHLMpgZm9bx6QYh0NFoq67TZ.jpg" alt="Mulher-Maravilha 1984" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Mulher-Maravilha 1984</h2>
+        <p class="movie-description">Diana Prince enfrenta novos desafios enquanto tenta manter a paz no mundo dos anos 80.</p>
+      </div>
+    </article>
+
+    <article class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/qJ2tW6WMUDux911r6m7haRef0WH.jpg" alt="O Cavaleiro das Trevas" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">O Cavaleiro das Trevas</h2>
+        <p class="movie-description">Batman enfrenta o Coringa em Gotham em uma luta épica pela justiça.</p>
+      </div>
+    </article>
+
+    <article class="movie-card">
+      <img src="https://image.tmdb.org/t/p/w500/rjbNpRMoVvqHmhmksbokcyCr7wn.jpg" alt="Vingadores: Ultimato" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Vingadores: Ultimato</h2>
+        <p class="movie-description">Os heróis mais poderosos do universo se unem para derrotar Thanos e salvar o universo.</p>
+      </div>
+    </article>
+
+    <article class="movie-card">
+      <img src="https://acdn-us.mitiendanube.com/stores/363/165/products/star-wars-uma-nova-esperanca1-68f9b2279f015445d016511103960380-640-0.jpg" alt="Star Wars uma nova esperança" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Star Wars: Uma nova esperança</h2>
+        <p class="movie-description">Novas gerações de heróis surgem para enfrentar o lado sombrio da galáxia.</p>
+      </div>
+    </article>
+
+
+    
+    <article class="movie-card">
+      <img src="https://www.claquete.com.br/fotos/filmes/poster/16292_medio.jpg" alt="Lilo & Stitch" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Lilo & Stitch</h2>
+        <p class="movie-description"> Lilo & Stitch conta a história da amizade entre uma jovem menina humana e um alienígena fugitivo que parece um cachorro.</p>
+      </div>
+    </article>
+
+    
+    <article class="movie-card">
+      <img src="https://a-static.mlcdn.com.br/800x560/poster-cartaz-sonic-o-filme-a-pop-arte-poster/poparteskins2/15938541868/7491f3a23e8ef223784c49f312a7203c.jpeg" alt="Sonic" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Sonic o filme</h2>
+        <p class="movie-description">O porco-espinho Sonic é teletransportado para a Terra. Após causar uma pane elétrica em parte dos Estados Unidos, ele precisa escapar do maligno cientista Dr. Robotnik..</p>
+      </div>
+    </article>
+
+    
+    <article class="movie-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSuB_mF7uDgCsj_q27OI4lk5z6t0rLDaZKOiw&s" alt="Creed III" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Creed 3</h2>
+        <p class="movie-description">Depois de dominar os ringues, Adonis Creed tem prosperado com sua carreira e família. Quando um amigo de infância e ex-prodígio do boxe, Damian, ressurge após uma longa sentença na prisão, o campeão fica ansioso para provar que merece sua chance.</p>
+      </div>
+    </article>
+
+
+    
+    <article class="movie-card">
+      <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRfQ9OUkYwRqZCQkOa0kYJjyrorKXgznF9HbA&s" alt="Avatar" class="movie-poster" />
+      <div class="movie-info">
+        <h2 class="movie-title">Avatar</h2>
+        <p class="movie-description">Após formar uma família, Jake Sully e Ney'tiri fazem de tudo para ficarem juntos. No entanto, eles devem sair de casa e explorar as regiões de Pandora quando uma antiga ameaça ressurge, e Jake deve travar uma guerra difícil contra os humanos.</p>
+      </div>
+    </article>
+  </section>
+</main>
+
+<footer>
+  <p>2025 Projeto de Filmes</p>
+</footer>
+
+</body>
+</html>

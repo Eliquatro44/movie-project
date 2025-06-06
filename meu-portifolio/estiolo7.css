@@ -1,0 +1,162 @@
+/* Reset básico */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  background-color: #f2f2f2;
+  color: #333;
+}
+
+:root {
+  --roxoEscuro: #4f46e5;
+  --roxoClaro: #7c3aed;
+  --escuro: #0f1720;
+  --maisEscuro: #0a0f1c;
+  --cinzaClaro: #e2e8f0;
+  --cinazEscuro: rgba(255, 255, 255, 0.1);
+}
+
+/* Cabeçalho */
+header {
+  background: linear-gradient(to right, var(--maisEscuro), var(--escuro));
+  color: white;
+  padding: 2rem 0;
+  text-align: center;
+}
+
+.foto-perfil {
+  width: 120px;
+  height: 120px;
+  border-radius: 50%;
+  border: 4px solid var(--cinazEscuro));
+  object-fit: cover;
+  border-radius: 50%;
+  box-shadow: 0 0 20px rgba(79, 70, 229, 0.3);
+  margin-bottom: 1rem;
+}
+
+.btn {
+  display: inline-block;
+  margin-top: 1rem;
+  padding: 0.6rem 1.2rem;
+  background-color: #f1faee;
+  color: #1d3557;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 5px;
+  transition: background 0.3s ease;
+}
+
+.btn:hover {
+  background-color: #a8dadc;
+}
+
+/* Navegação */
+.navbar {
+  background-color: #f1faee;
+  padding: 0.5rem 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.navbar ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+.navbar a {
+  color: #1d3557;
+  text-decoration: none;
+  font-weight: 600;
+  padding: 0.5rem;
+  position: relative;
+}
+
+.navbar a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 2px;
+  background-color: #1d3557;
+  transition: width 0.3s ease-in-out;
+}
+
+.navbar a:hover::after,
+.navbar a.active::after {
+  width: 100%;
+}
+
+.navbar a.active {
+  color: #e63946;
+}
+
+/* Conteúdo */
+.container {
+  width: 90%;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+section {
+  padding: 3rem 0;
+}
+
+h2 {
+  margin-bottom: 1rem;
+  color: #1d3557;
+}
+
+/* Projetos */
+.cards {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.5rem;
+}
+
+.card {
+  flex: 1 1 280px;
+  background-color: #fff;
+  padding: 1.5rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Habilidades */
+.skills {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  font-size: 1.2rem;
+}
+
+.skills div {
+  background-color: #fff;
+  padding: 0.8rem 1rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Rodapé */
+footer {
+  text-align: center;
+  padding: 1rem;
+  background-color: var(--escuro);
+  font-size: 0.9rem;
+  color: white;
+}
+
+/* Links de contato */
+#contato a {
+  color: #0077cc;
+  text-decoration: none;
+}
